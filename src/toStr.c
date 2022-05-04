@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <stdint.h>
 #include <string.h>
 #include "libdpnc.h"
 
@@ -14,11 +15,11 @@ char *DPN32toStr(DPN32_t *a)
         int filter;
         for(int i = 0; i < a->pointDigit; i++) filter |= 1<<i;
         int32_t y = a->val & filter;
-        sprintf(&buffer, "%"PRI32".%"PRI32, x, y);
+        sprintf(&buffer, "%i.%i", x, y);
     }
     else
     {
-        sprintf(&buffer, "%"PRI32, x);
+        sprintf(&buffer, "%i", x);
     }
     char *ret = (char*)malloc(strlen(buffer) + 1);
     strncpy(ret, buffer, strlen(buffer) + 1);
@@ -36,11 +37,11 @@ char *DPN64toStr(DPN64_t *a)
         int filter;
         for(int i = 0; i < a->pointDigit; i++) filter |= 1<<i;
         int64_t y = a->val & filter;
-        sprintf(&buffer, "%"PRI64".%"PRI64, x, y);
+        sprintf(&buffer, "%ll.%ll", x, y);
     }
     else
     {
-        sprintf(&buffer, "%"PRI64, x);
+        sprintf(&buffer, "%ll", x);
     }
     char *ret = (char*)malloc(strlen(buffer) + 1);
     strncpy(ret, buffer, strlen(buffer) + 1);

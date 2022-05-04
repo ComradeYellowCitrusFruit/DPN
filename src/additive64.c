@@ -8,10 +8,10 @@ void addInt64(DPN64_t *a, int64_t Int)
     Int <<= a->pointDigit;
     a->val += Int;
 }
-void addDouble64(DPN64_t *a, double double)
+void addDouble64(DPN64_t *a, double Double)
 {
     DPN64_t *b = initDPN64Point(a->pointDigit);
-    assignDouble64(b, double);
+    assignDouble64(b, Double);
     addDPN64(a, b);
     free(b);
 }
@@ -30,10 +30,10 @@ void multInt64(DPN32_t *a, int64_t Int)
     Int <<= a->pointDigit;
     a->val *= Int;
 }
-void multDouble64(DPN64_t *a, double double)
+void multDouble64(DPN64_t *a, double Double)
 {
     DPN64_t *b = initDPN64Point(a->pointDigit);
-    assignDouble64(b, double);
+    assignDouble64(b, Double);
     multDPN64(a, b);
     free(b);
 }
