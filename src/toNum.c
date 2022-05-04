@@ -21,14 +21,14 @@ float DPN32toFloat(DPN32_t *a)
     return ret;
 }
 
-int DPN64toInt(struct DPN64_t *a)
+int DPN64toInt(DPN64_t *a)
 {
     return a->val >> a->pointDigit;
 }
-double DPN64todouble(struct DPN64_t *a)
+double DPN64todouble(DPN64_t *a)
 {
     double ret = (double)DPN64toInt(a);
-    struct DPN64_t *b = initDPN64Point(a->pointDigit);
+    DPN64_t *b = initDPN64Point(a->pointDigit);
     assignDPN64(b, a);
     int64_t filter;
     for(int i = b->pointDigit; i < 30; i++) filter |= 1<<i;

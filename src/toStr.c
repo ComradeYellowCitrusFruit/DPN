@@ -25,7 +25,7 @@ char *DPN32toStr(DPN32_t *a)
     return ret;
 }
 
-char *DPN64toStr(struct DPN64_t *a)
+char *DPN64toStr(DPN64_t *a)
 {
     /* Let's pray this is enough */
     char buffer[300];

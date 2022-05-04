@@ -15,7 +15,7 @@ void adjustDPN32(DPN32_t *a, DPN32_t *b)
     }
 }
 
-void adjustDPN64(struct DPN64_t *a, struct DPN64_t *b)
+void adjustDPN64(DPN64_t *a, DPN64_t *b)
 {
     if(a->pointDigit > b->pointDigit)
     {

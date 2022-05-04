@@ -57,35 +57,35 @@ float DPN32toFloat(DPN32_t *a);
 /* 64 Bit DPN Section */
 
 /* Initate DPN64_t */
-struct DPN64_t *initDPN64();
+DPN64_t *initDPN64();
 /* Initate DPN64_t with preset point digit */
-struct DPN64_t *initDPN64Point(int digit);
+DPN64_t *initDPN64Point(int digit);
 
-void assignInt64(struct DPN64_t *a, int64_t Int);
-void assignDouble64(struct DPN64_t *a, double double);
-void assignDPN64(struct DPN64_t *a, struct DPN64_t *b);
+void assignInt64(DPN64_t *a, int64_t Int);
+void assignDouble64(DPN64_t *a, double double);
+void assignDPN64(DPN64_t *a, DPN64_t *b);
 
-void addInt64(struct DPN64_t *a, int64_t Int);
-void addDouble64(struct DPN64_t *a, double double);
-void addDPN64(struct DPN64_t *a, struct DPN64_t *b);
+void addInt64(DPN64_t *a, int64_t Int);
+void addDouble64(DPN64_t *a, double double);
+void addDPN64(DPN64_t *a, DPN64_t *b);
 
-void subInt64(struct DPN64_t *a, int64_t Int);
-void subDouble64(struct DPN64_t *a, double double);
-void subDPN64(struct DPN64_t *a, struct DPN64_t *b);
+void subInt64(DPN64_t *a, int64_t Int);
+void subDouble64(DPN64_t *a, double Double);
+void subDPN64(DPN64_t *a, DPN64_t *b);
 
-void multInt64(struct DPN64_t *a, int64_t Int);
-void multDouble64(struct DPN64_t *a, double double);
-void multDPN64(struct DPN64_t *a, struct DPN64_t *b);
+void multInt64(DPN64_t *a, int64_t Int);
+void multDouble64(DPN64_t *a, double Double);
+void multDPN64(DPN64_t *a, DPN64_t *b);
 
-void divInt64(struct DPN64_t *a, int64_t Int);
-void divDouble64(struct DPN64_t *a, double double);
-void divDPN64(struct DPN64_t *a, struct DPN64_t *b);
+void divInt64(DPN64_t *a, int64_t Int);
+void divDouble64(DPN64_t *a, double Double);
+void divDPN64(DPN64_t *a, DPN64_t *b);
 
-void setPoint64(struct DPN64_t *a, int digit);
+void setPoint64(DPN64_t *a, int digit);
 
-char *DPN64toStr(struct DPN64_t *a);
-int DPN64toInt(struct DPN64_t *a);
-double DPN64toDouble(struct DPN64_t *a);
+char *DPN64toStr(DPN64_t *a);
+int DPN64toInt(DPN64_t *a);
+double DPN64toDouble(DPN64_t *a);
 
 #ifdef __cplusplus
 }
