@@ -62,11 +62,11 @@ DPN64_t *initDPN64();
 DPN64_t *initDPN64Point(int digit);
 
 void assignInt64(DPN64_t *a, int64_t Int);
-void assignDouble64(DPN64_t *a, double double);
+void assignDouble64(DPN64_t *a, double Double);
 void assignDPN64(DPN64_t *a, DPN64_t *b);
 
 void addInt64(DPN64_t *a, int64_t Int);
-void addDouble64(DPN64_t *a, double double);
+void addDouble64(DPN64_t *a, double Double);
 void addDPN64(DPN64_t *a, DPN64_t *b);
 
 void subInt64(DPN64_t *a, int64_t Int);
@@ -74,7 +74,7 @@ void subDouble64(DPN64_t *a, double Double);
 void subDPN64(DPN64_t *a, DPN64_t *b);
 
 void multInt64(DPN64_t *a, int64_t Int);
-void multDouble64(DPN64_t *a, double Double);
+void multDouble64(DPN64_t *a, double d);
 void multDPN64(DPN64_t *a, DPN64_t *b);
 
 void divInt64(DPN64_t *a, int64_t Int);
